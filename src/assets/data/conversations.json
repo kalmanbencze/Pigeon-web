@@ -1,0 +1,9 @@
+[
+  {
+    "id": "1",
+    "timestamp": "10",
+    "senderId": "0",
+    "receiverId": "1",
+    "data": "hello"
+  }
+]

@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import {MessageService} from './message.service';
+import {MessagesService} from '../services/messages.service';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import {MessageService} from './message.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [MessageService],
+  providers: [MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

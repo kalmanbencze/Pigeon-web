@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {MessageService} from './message.service';
+import {MessagesService} from '../services/messages.service';
 import {Observable} from 'rxjs/Observable';
 
 @Component({
@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'Pigeon';
   messages$: Observable<Object>;
 
-  constructor(private messageService: MessageService) {
+  constructor(private messageService: MessagesService) {
   }
 
   fetchMessages(): void {
