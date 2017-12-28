@@ -2,15 +2,15 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <mat-toolbar>
   <mat-toolbar-row>
-    <h1>
+    <h1 class="title">
       Welcome to {{ title }}!
     </h1>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container class="example-container">
   <mat-sidenav mode="side" opened="true" align="start" #right style="width: 200px;">
-    <h1>First</h1>
-    <h1>Second</h1>
+    <h1 class="nav-item">First</h1>
+    <h1 class="nav-item">Second</h1>
   </mat-sidenav>
   <mat-sidenav-content style="padding: 20px;">
     <button mat-raised-button (click)="fetchMessages()">Fetch messages</button>
