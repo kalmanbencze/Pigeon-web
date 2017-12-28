@@ -1,30 +1,30 @@
 [
   {
-    "id": "1",
+    "id": "0",
     "timestamp": "10",
     "senderId": "0",
     "receiverId": "1",
     "data": "hello"
   },
   {
-    "id": "2",
+    "id": "1",
     "timestamp": "22",
-    "senderId": "0",
-    "receiverId": "2",
+    "senderId": "1",
+    "receiverId": "0",
     "data": "hi"
   },
   {
-    "id": "3",
+    "id": "2",
     "timestamp": "35",
-    "senderId": "2",
+    "senderId": "0",
     "receiverId": "1",
-    "data": "he messaged you again right?"
+    "data": "how are you?"
   },
   {
-    "id": "4",
+    "id": "3",
     "timestamp": "40",
     "senderId": "1",
     "receiverId": "0",
-    "data": "what's up?"
+    "data": "I'm fine, what's up?"
   }
 ]

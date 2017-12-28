@@ -3,7 +3,7 @@ import {MessagesService} from '../services/messages.service';
 import {Observable} from 'rxjs/Observable';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-component',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
