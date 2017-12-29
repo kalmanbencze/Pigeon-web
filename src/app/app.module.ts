@@ -1,95 +1,46 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-
-
-import {AppComponent} from './app.component';
+import {FullscreenOverlayContainer, OverlayContainer} from '@angular/cdk/overlay';
+import {CommonModule} from '@angular/common';
+import {ApplicationRef, NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {LayoutModule} from '@angular/cdk/layout';
+import {DEMO_APP_ROUTES} from './routes';
+import {AppComponent, EntryComponent} from './app.component';
+import {MaterialModule} from '../material-module';
 import {HttpClientModule} from '@angular/common/http';
-import {MessagesService} from '../services/messages.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {
-  MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule,
-  MatDatepickerModule, MatDialogModule, MatExpansionModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule,
-  MatNativeDateModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule,
-  MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule,
-  MatTabsModule, MatToolbarModule, MatTooltipModule
-} from '@angular/material';
-
+import {BrowserModule} from '@angular/platform-browser';
+import {MessagesModule} from '../messages/messages.module';
 
 @NgModule({
-  exports: [
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatStepperModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
+    RouterModule.forRoot(DEMO_APP_ROUTES),
+    LayoutModule,
+    MessagesModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
   declarations: [
+    EntryComponent,
     AppComponent
   ],
-  imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    HttpClientModule,
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatStepperModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule
+  providers: [
+    {provide: OverlayContainer, useClass: FullscreenOverlayContainer},
   ],
-  providers: [MessagesService],
-  bootstrap: [AppComponent]
+  entryComponents: [
+    EntryComponent,
+    AppComponent
+  ],
 })
 export class AppModule {
+  constructor(private _appRef: ApplicationRef) { }
+
+  ngDoBootstrap() {
+    this._appRef.bootstrap(EntryComponent);
+  }
 }
