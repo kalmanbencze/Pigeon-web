@@ -1,6 +1,10 @@
-<mat-sidenav-container class="demo-root" fullscreen>
+<mat-sidenav-container fullscreen>
   <mat-sidenav #start>
     <mat-nav-list>
+        <svg class="profile-image" fill="#666666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
       <a *ngFor="let navItem of navItems"
          mat-list-item
          (click)="start.close()"
@@ -28,15 +32,9 @@
         <mat-icon>menu</mat-icon>
       </button>
       <div class="demo-toolbar">
-        <h1>Angular Material Demos</h1>
+        <h1>Pigeon</h1>
         <div>
-          <button mat-icon-button (click)="toggleFullscreen()" title="Toggle fullscreen">
-            <mat-icon>fullscreen</mat-icon>
-          </button>
           <button mat-button (click)="toggleTheme()">{{dark ? 'Light' : 'Dark'}} theme</button>
-          <button mat-button (click)="root.dir = (root.dir == 'rtl' ? 'ltr' : 'rtl')" title="Toggle between RTL and LTR">
-            {{root.dir.toUpperCase()}}
-          </button>
         </div>
       </div>
     </mat-toolbar>

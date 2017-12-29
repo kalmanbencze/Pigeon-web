@@ -9,7 +9,7 @@ body {
   }
 
   .mat-sidenav {
-    min-width: 15vw;
+    min-width: 20vw;
 
     .mat-button {
       width: 100%;
@@ -17,6 +17,14 @@ body {
       bottom: 0;
       margin: 24px 0;
     }
+  }
+  .mat-nav-list{
+
+  }
+
+  .profile-image{
+    width: 250px;
+    height: 250px;
   }
 
   .demo-content {
