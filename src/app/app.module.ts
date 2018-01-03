@@ -13,6 +13,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {MessagesModule} from '../messages/messages.module';
 import {AboutModule} from '../about/about.module';
 import {ContactsModule} from '../contacts/contacts.module';
+import {SettingsModule} from '../settings/settings.module';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import {ContactsModule} from '../contacts/contacts.module';
     LayoutModule,
     MessagesModule,
     ContactsModule,
+    SettingsModule,
     AboutModule,
     BrowserModule,
     BrowserAnimationsModule,
