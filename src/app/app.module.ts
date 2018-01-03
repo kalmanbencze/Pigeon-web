@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
 import {MessagesModule} from '../messages/messages.module';
+import {AboutModule} from '../about/about.module';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import {MessagesModule} from '../messages/messages.module';
     RouterModule.forRoot(DEMO_APP_ROUTES),
     LayoutModule,
     MessagesModule,
+    AboutModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,

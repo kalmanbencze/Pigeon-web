@@ -22,6 +22,8 @@ export class EntryComponent {}
 export class AppComponent {
   dark = false;
   navItems = [
+    {name: 'Messages', route: '/messages'},
+    {name: 'Contacts', route: '/contacts'},
     {name: 'Settings', route: '/settings'},
     {name: 'About', route: '/about'}
   ];
