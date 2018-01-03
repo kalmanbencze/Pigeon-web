@@ -1,0 +1,15 @@
+.messages-container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.title {
+  color: darkcyan;
+}
+
+.nav-item {
+  margin: 8px;
+  color: coral;
+}
