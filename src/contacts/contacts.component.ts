@@ -3,7 +3,7 @@ import {Observable} from 'rxjs/Observable';
 import {ContactsService} from '../services/contacts.service';
 
 @Component({
-  selector: 'messages-component',
+  selector: 'contacts-component',
   templateUrl: 'contacts.component.html',
   styleUrls: ['contacts.component.css']
 })
