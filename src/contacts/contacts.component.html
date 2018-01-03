@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+
+  <mat-toolbar>
+    <h1 class="title">
+      {{ title }}
+    </h1>
+  </mat-toolbar>
+  <button mat-raised-button (click)="fetchMessages()">Fetch contacts</button>
+
+
+  <ul>
+    <mat-card style="width: 300px; margin-top: 8px" *ngFor="let contact of contacts$ | async">
+      <mat-card-title>Id {{contact.id}}</mat-card-title>
+      <mat-card-content>
+        <p>{{ contact.name}}</p></mat-card-content>
+      <mat-card-actions>
+        <button mat-button>DELETE</button>
+      </mat-card-actions>
+    </mat-card>
+  </ul>
+
+</div>

@@ -12,6 +12,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BrowserModule} from '@angular/platform-browser';
 import {MessagesModule} from '../messages/messages.module';
 import {AboutModule} from '../about/about.module';
+import {ContactsModule} from '../contacts/contacts.module';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import {AboutModule} from '../about/about.module';
     RouterModule.forRoot(DEMO_APP_ROUTES),
     LayoutModule,
     MessagesModule,
+    ContactsModule,
     AboutModule,
     BrowserModule,
     BrowserAnimationsModule,
